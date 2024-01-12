@@ -11,7 +11,7 @@ const Modal = ({ clientId, closeModal, updateFileCount }) => {
 
   const fetchUploadedFiles = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/attachments/${clientId}`);
+      const response = await axios.get(`http://localhost:5000/upload/${clientId}`);
       setUploadedFiles(response.data);
       setFileCount(response.data.length);
     } catch (error) {
